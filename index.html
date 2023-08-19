@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
-
+    <!-- tailwind css and daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -24,12 +24,19 @@
                     <figure><img src="./images/triangle.png" alt="Triangle" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Triangle</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <p>
+                        <input class="text-xl border rounded w-24 px-2 bg-gray-200" id="triangle-base" type="text" name="" placeholder="base">
+                        <span class="ml-2">cm</span>
+                        <input class="text-xl ml-4 border rounded w-24 px-2 bg-gray-200" id="triangle-height" type="text" name="" placeholder="height">
+                        <span class="ml-2">cm</span>
+                      </p>
+                      <p>Area:</p>
+                      <div class="card-actions">
+                        <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
-                  </div>
+                </div>
                 <!-- second card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="./images/triangle.png" alt="Triangle" /></figure>
@@ -60,6 +67,8 @@
         </div>
 
     </main>
-    
+
+    <!-- JS -->
+    <script src="./scripts/area-calculator.js"></script>
 </body>
 </html>
